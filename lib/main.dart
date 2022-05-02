@@ -1,8 +1,10 @@
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:trade_masti/anisplash.dart';
 
-import './home.dart';
+import 'package:page_transition/page_transition.dart';
+
+import './models/home.dart';
+import './models/anisplash.dart';
 
 void main() {
   runApp(MyApp());
@@ -19,11 +21,12 @@ class MyApp extends StatelessWidget {
       ),
       home: AnimatedSplashScreen(
         splash: AniSplash(),
-        // duration: 6000,
+        duration: 2500,
         nextScreen: MyHomePage(title: "Trade Masti"),
         backgroundColor: Colors.cyan,
         animationDuration: Duration(milliseconds: 1500),
         splashTransition: SplashTransition.fadeTransition,
+        pageTransitionType: PageTransitionType.leftToRight,
       ),
     );
   }
