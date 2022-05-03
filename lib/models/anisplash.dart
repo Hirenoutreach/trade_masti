@@ -4,12 +4,13 @@ class AniSplash extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Text(
-        "TradeMasti",
-        style: TextStyle(
-            fontSize: 40,
-            fontWeight: FontWeight.bold,
-            color: Color.fromARGB(255, 62, 63, 65)),
+      child: AspectRatio(
+        aspectRatio: 25 / 25,
+        child: Image(
+          image: AssetImage(
+            'assets/image/WhatsApp Image 2022-04-27 at 3.02.03 PM.jpg',
+          ),
+        ),
       ),
     );
   }

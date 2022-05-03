@@ -1,6 +1,5 @@
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
-
 import 'package:page_transition/page_transition.dart';
 
 import './models/home.dart';
@@ -15,15 +14,16 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      title: 'Trade Masti',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.cyan,
       ),
       home: AnimatedSplashScreen(
         splash: AniSplash(),
         duration: 2500,
         nextScreen: MyHomePage(title: "Trade Masti"),
-        backgroundColor: Colors.cyan,
+        backgroundColor: Color.fromARGB(255, 211, 240, 254),
         animationDuration: Duration(milliseconds: 1500),
         splashTransition: SplashTransition.fadeTransition,
         pageTransitionType: PageTransitionType.leftToRight,
