@@ -4,7 +4,7 @@ import './models/anisplash.dart';
 import 'models/mylogin.dart';
 
 void main() {
-  runApp(MyLoginPage());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {

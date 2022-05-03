@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 
 import './home.dart';
+import 'mylogin.dart';
 
 class AniSplash extends StatelessWidget {
   @override
@@ -14,7 +15,7 @@ class AniSplash extends StatelessWidget {
         fit: BoxFit.fill,
       ),
       duration: 2500,
-      nextScreen: MyHomePage(title: "Trade Masti"),
+      nextScreen: MyLoginPage(),
       backgroundColor: Color.fromARGB(255, 211, 240, 254),
       animationDuration: Duration(milliseconds: 1500),
       splashTransition: SplashTransition.fadeTransition,
