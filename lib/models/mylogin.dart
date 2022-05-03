@@ -41,8 +41,9 @@ class _MyLoginPageState extends State<MyLoginPage> {
                 color: Color.fromARGB(255, 211, 240, 254),
                 child: TextField(
                   decoration: InputDecoration(
+                    prefixIcon: Icon(Icons.person),
                     fillColor: Colors.grey[100],
-                    hintText: "UserName",
+                    hintText: "User id",
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(5),
                       borderSide: BorderSide.none,
@@ -55,12 +56,33 @@ class _MyLoginPageState extends State<MyLoginPage> {
                 height: 10,
               ),
 
+              // Card(
+              //   elevation: 3,
+              //   color: Color.fromARGB(255, 211, 240, 254),
+              //   child: TextField(
+              //     decoration: InputDecoration(
+              //       prefixIcon: Icon(Icons.mail),
+              //       fillColor: Colors.grey[100],
+              //       hintText: "Email id",
+              //       border: OutlineInputBorder(
+              //         borderRadius: BorderRadius.circular(5),
+              //         borderSide: BorderSide.none,
+              //       ),
+              //     ),
+              //   ),
+              // ),
+
+              // SizedBox(
+              //   height: 10,
+              // ),
+
               Card(
                 elevation: 3,
                 color: Color.fromARGB(255, 211, 240, 254),
                 child: TextField(
                   obscureText: true,
                   decoration: InputDecoration(
+                    prefixIcon: Icon(Icons.password),
                     fillColor: Colors.grey[100],
                     hintText: "Password",
                     border: OutlineInputBorder(
@@ -78,20 +100,20 @@ class _MyLoginPageState extends State<MyLoginPage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  TextButton(
-                      onPressed: () {},
-                      child: Text(
-                        "Sign in",
-                        style: TextStyle(
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold,
-                            color: Color.fromARGB(255, 44, 162, 168)),
-                      )),
+                  Text(
+                    "Sign in",
+                    style: TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
+                        color: Color.fromARGB(255, 44, 162, 168)),
+                  ),
                   CircleAvatar(
                     radius: 24,
                     backgroundColor: Color.fromARGB(255, 44, 162, 168),
                     child: IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, 'homepage');
+                      },
                       icon: Icon(Icons.arrow_forward),
                     ),
                   ),
@@ -105,7 +127,9 @@ class _MyLoginPageState extends State<MyLoginPage> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, 'signup');
+                      },
                       child: Text(
                         "Sign Up",
                         style: TextStyle(

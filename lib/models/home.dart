@@ -23,12 +23,16 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Color.fromARGB(255, 211, 240, 254),
         title: Text(
           "TradeMasti",
-          style: TextStyle(color: Color.fromARGB(255, 19, 25, 29)),
+          style: TextStyle(color: Color.fromARGB(255, 44, 162, 168)),
         ),
         centerTitle: true,
-        leading: IconButton(onPressed: () {}, icon: Icon(Icons.menu)),
+        leading: IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.menu),
+            color: Color.fromARGB(255, 44, 162, 168)),
       ),
     );
   }

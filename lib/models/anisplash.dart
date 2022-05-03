@@ -14,10 +14,10 @@ class AniSplash extends StatelessWidget {
         scale: 0.1,
         fit: BoxFit.fill,
       ),
-      duration: 2500,
+      duration: 1500,
       nextScreen: MyLoginPage(),
       backgroundColor: Color.fromARGB(255, 211, 240, 254),
-      animationDuration: Duration(milliseconds: 1500),
+      animationDuration: Duration(milliseconds: 1000),
       splashTransition: SplashTransition.fadeTransition,
       pageTransitionType: PageTransitionType.leftToRight,
     );

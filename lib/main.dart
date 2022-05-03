@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:trade_masti/models/signup.dart';
 
 import './models/anisplash.dart';
+import 'models/home.dart';
 import 'models/mylogin.dart';
 
 void main() {
@@ -14,12 +16,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Trade Masti',
-      theme: ThemeData(
-        primarySwatch: Colors.cyan,
-      ),
       initialRoute: 'home',
       routes: {
         'home': (context) => AniSplash(),
+        'homepage': (context) => MyHomePage(title: "Trade Masti"),
+        'signup': (context) => SignUp(),
+        'login': (context) => MyLoginPage(),
       },
     );
   }
