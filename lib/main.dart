@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
 import './models/anisplash.dart';
+import 'models/mylogin.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(MyLoginPage());
 }
 
 class MyApp extends StatelessWidget {
