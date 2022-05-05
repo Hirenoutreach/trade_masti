@@ -126,7 +126,9 @@ class _MyLoginPageState extends State<MyLoginPage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  TextButton(
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          primary: Color.fromARGB(255, 44, 162, 168)),
                       onPressed: () {
                         Navigator.pushNamed(context, 'signup');
                       },
@@ -135,7 +137,7 @@ class _MyLoginPageState extends State<MyLoginPage> {
                         style: TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
-                            color: Color.fromARGB(255, 44, 162, 168)),
+                            color: Color.fromARGB(255, 217, 240, 241)),
                       )),
                   TextButton(
                       onPressed: () {},

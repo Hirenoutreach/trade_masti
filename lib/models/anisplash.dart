@@ -11,7 +11,7 @@ class AniSplash extends StatelessWidget {
     return AnimatedSplashScreen(
       splash: Image.asset(
         'assets/image/WhatsApp Image 2022-04-27 at 3.02.03 PM.jpg',
-        scale: 0.1,
+        scale: 0.2,
         fit: BoxFit.fill,
       ),
       duration: 1500,

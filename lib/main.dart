@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       initialRoute: 'home',
       routes: {
         'home': (context) => AniSplash(),
-        'homepage': (context) => MyHomePage(title: "Trade Masti"),
+        'homepage': (context) => MyHomePage(),
         'signup': (context) => SignUp(),
         'login': (context) => MyLoginPage(),
       },

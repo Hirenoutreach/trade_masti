@@ -9,6 +9,8 @@ class SignUp extends StatefulWidget {
 }
 
 class _SignUpState extends State<SignUp> {
+  var _formKey = GlobalKey<FormState>();
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -60,23 +62,26 @@ class _SignUpState extends State<SignUp> {
               Card(
                 elevation: 3,
                 color: Color.fromARGB(255, 211, 240, 254),
-                child: TextFormField(
-                  //  controller: widget.controller,
-                  decoration: InputDecoration(
-                    hintText: "Email id",
-                    border: OutlineInputBorder(
-                      borderSide: BorderSide.none,
-                      borderRadius: BorderRadius.circular(5),
+                child: Form(
+                  key: _formKey,
+                  child: TextFormField(
+                    //  controller: widget.controller,
+                    decoration: InputDecoration(
+                      hintText: "Email id",
+                      border: OutlineInputBorder(
+                        borderSide: BorderSide.none,
+                        borderRadius: BorderRadius.circular(5),
+                      ),
+                      prefixIcon: Icon(Icons.mail),
+                      suffixIcon: IconButton(
+                        icon: Icon(Icons.close),
+                        onPressed: () {},
+                      ),
                     ),
-                    prefixIcon: Icon(Icons.mail),
-                    suffixIcon: IconButton(
-                      icon: Icon(Icons.close),
-                      onPressed: () {},
-                    ),
+                    keyboardType: TextInputType.emailAddress,
+                    autofillHints: [AutofillHints.email],
+                    //  validator: (email)=>email!=null && !Emailvalidator.validate(email),
                   ),
-                  keyboardType: TextInputType.emailAddress,
-                  autofillHints: [AutofillHints.email],
-                  //  validator: (email)=>email!=null && !Emailvalidator.validate(email),
                 ),
               ),
 
@@ -108,8 +113,9 @@ class _SignUpState extends State<SignUp> {
                 elevation: 3,
                 color: Color.fromARGB(255, 211, 240, 254),
                 child: TextField(
+                  keyboardType: TextInputType.number,
                   decoration: InputDecoration(
-                    prefixIcon: Icon(Icons.password),
+                    prefixIcon: Icon(Icons.mobile_friendly_outlined),
                     fillColor: Colors.grey[100],
                     hintText: "Mobile Number",
                     border: OutlineInputBorder(
@@ -161,16 +167,18 @@ class _SignUpState extends State<SignUp> {
                 height: 20,
               ),
 
-              TextButton(
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    primary: Color.fromARGB(255, 44, 162, 168)),
                 onPressed: () {
                   Navigator.pushNamed(context, 'login');
                 },
                 child: Text(
                   "Sign Up",
                   style: TextStyle(
-                      fontSize: 24,
+                      fontSize: 20,
                       fontWeight: FontWeight.bold,
-                      color: Color.fromARGB(255, 44, 162, 168)),
+                      color: Color.fromARGB(255, 217, 240, 241)),
                 ),
               ),
 
